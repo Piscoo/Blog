@@ -1,9 +1,9 @@
 // If you don't want to use TypeScript you can delete this file!
 import * as React from "react"
 import { PageProps, Link, graphql } from "gatsby"
-
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import { StaticImage } from "gatsby-plugin-image"
 
 type DataProps = {
   site: {
@@ -28,6 +28,14 @@ const UsingTypescript: React.FC<PageProps<DataProps>> = ({ data, path }) => (
       You're currently on the page "{path}" which was built on{" "}
       {data.site.buildTime}.
     </p>
+	<StaticImage
+		src="../images/gatsby-astronaut.png"
+		width={300}
+		quality={95}
+		formats={["auto", "webp", "avif"]}
+		alt="A Gatsby astronaut"
+		style={{ marginBottom: `1.45rem` }}
+	/>
     <p>
       To learn more, head over to our{" "}
       <a href="https://www.gatsbyjs.com/docs/typescript/">

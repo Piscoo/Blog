@@ -2,17 +2,25 @@ module.exports = {
     siteMetadata: {
         title: `Pisco's Blog`,
         description: `Welcome to my playground!`,
-        author: `@gatsbyjs`,
-        siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+        author: `Pisco`,
+        siteUrl: `https://pisco.netlify.app/`,
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
         `gatsby-plugin-image`,
+        `gatsby-plugin-sass`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: `images`,
                 path: `${__dirname}/src/images`,
+            },
+        },
+		{
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `src`,
+                path: `${__dirname}/src/`,
             },
         },
         `gatsby-transformer-sharp`,
@@ -31,8 +39,7 @@ module.exports = {
                 icon: `src/images/logo.jpg`, // This path is relative to the root of the site.
             },
         },
-        // this (optional) plugin enables Progressive Web App + Offline functionality
-        // To learn more, visit: https://gatsby.dev/offline
-        // `gatsby-plugin-offline`,
+        `gatsby-transformer-remark`,
+		`gatsby-plugin-antd`,
     ],
 }
