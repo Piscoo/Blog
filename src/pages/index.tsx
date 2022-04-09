@@ -18,6 +18,7 @@ const IndexPage = () => {
 	`)
 	const siteConfig = data.site.siteMetadata;
 	const [headerClassName, setHeaderClassName] = useState<string>(`transparentHeader`);
+	const [scrollTop, setScrollTop] = useState<number>(0);
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
@@ -25,7 +26,8 @@ const IndexPage = () => {
 
 	const handleScroll = (): void => {
 		let top: number = document.documentElement.scrollTop;
-		if (top <= 150) {
+		setScrollTop(top);
+		if (scrollTop <= 150) {
 			setHeaderClassName("transparentHeader");
 		} else {
 			setHeaderClassName(`whiteHeader`);
@@ -42,8 +44,10 @@ const IndexPage = () => {
 				<p className="banner-subtitle">{siteConfig.description}</p>
 			</div>
 		</div>
-		<div className="blog-block-title">最新文章</div>
-		<BlogList></BlogList>
+		<div className="blog-lists-box">
+			<div className="blog-block-title">最新文章</div>
+			<BlogList></BlogList>
+		</div>
 	</Layout>
 }
 export default IndexPage

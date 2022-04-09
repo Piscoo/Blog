@@ -5,7 +5,7 @@ tags: "柯里化"
 categories: "JavaScript"
 ---
 
-![Currying](@/images/JS/curry.png)
+![Currying](../../images/JS/curry.png)
 # 柯里化
 
 > [柯里化(Currying)](https://zh.wikipedia.org/wiki/%E6%9F%AF%E9%87%8C%E5%8C%96)，是把接收多个参数的函数变换成接受一个单一参数的函数，并且返回接受余下的参数而且返回结果的新函数的技术。

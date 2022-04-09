@@ -21,11 +21,18 @@ body {
 	font-feature-settings: "kern", "liga", "clig", "calt";
 }
 html, body, #___gatsby, #gatsby-focus-wrapper {
-	width: 100%;
-	height: 100%;
+	// width: 100%;
+	// height: 100%;
 	position: relative;
     font-size: 16px;
     font-family: 'ArefRuqaa';
+}
+#___gatsby {
+	// background: url("../images/index/sea.jpeg");
+	// background-size: cover;
+	// background-position: top;
+	// background-repeat: no-repeat;
+	// background-attachment: fixed;
 }
 
 article,
