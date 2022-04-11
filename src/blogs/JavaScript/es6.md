@@ -1,5 +1,5 @@
 ---
-title: "使用ES6的特性让代码变简洁美观"
+title: "使用ES6+的特性美化代码"
 date: "2022-04-11"
 tags: "ES6"
 categories: "JavaScript"
