@@ -1,7 +1,7 @@
 ---
-title: "React + Vite 开发中的一些记录"
+title: "React开发中的一些实用函数"
 date: "2022-04-14"
-tags: "React"
+tags: "方法"
 categories: "React系列"
 ---
 

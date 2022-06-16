@@ -1,3 +1,9 @@
+---
+title: "JS页面平滑滚动到顶部"
+date: "2022-04-12"
+tags: "skill"
+categories: "JavaScript"
+---
 ## 页面平滑滚动到顶部的实现方法
 
 ### 1. `window.scrollTo` API

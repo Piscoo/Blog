@@ -49,6 +49,13 @@ section,
 summary {
 	display: block;
 }
+main {
+	background: #fff url("../images/index/sea.jpeg");
+	background-size: cover;
+	background-position: top;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
 
 audio,
 canvas,
