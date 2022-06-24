@@ -37,16 +37,18 @@ const IndexPage = () => {
 		headerClassName={headerClassName}
 		fullScreenContent={true}
 	>
-		<Seo title="Home" />
-		<div className="home-banner">
-			<div className="container">
-				<h1 className="banner-title">{siteConfig.title}</h1>
-				<p className="banner-subtitle">{siteConfig.description}</p>
+		<div className="home-page water-bg-page">
+			<Seo title="Home" />
+			<div className="home-banner">
+				<div className="container">
+					<h1 className="banner-title">{siteConfig.title}</h1>
+					<p className="banner-subtitle">{siteConfig.description}</p>
+				</div>
 			</div>
-		</div>
-		<div className="blog-lists-box">
-			<div className="blog-block-title">最新文章</div>
-			<BlogList></BlogList>
+			<div className="blog-lists-box">
+				<div className="blog-block-title">最新文章</div>
+				<BlogList></BlogList>
+			</div>
 		</div>
 	</Layout>
 }

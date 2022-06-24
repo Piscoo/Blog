@@ -17,7 +17,8 @@ const Layout = ({ children, headerClassName, fullScreenContent = false }) => {
 				headerClassName={headerClassName}
 			/>
 			<>
-				<main style={{ width: `100%`, height: `100%`, paddingTop: `${fullScreenContent ? 0 : "60px"}` }}>{children}</main>
+				<main style={{ paddingTop: `${fullScreenContent ? 0 : "60px"}` }}>{children}</main>
+				{/* <main>{children}</main> */}
 			</>
 		</div>
 	)

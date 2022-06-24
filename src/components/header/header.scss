@@ -15,14 +15,14 @@
 	z-index: 1000;
 	background: rgba(255, 255, 255, 0.7);
 	backdrop-filter: blur(2px);
-	border-bottom: 1px solid #e3e3e3;
+	// border-bottom: 1px solid #e3e3e3;
 	&.transparentHeader {
 		background: transparent;
 		border-bottom: none;
 		backdrop-filter: none;
 		.header_title {
 			&:hover {
-				text-shadow: 5px 5px 10px $hoverColor;
+				text-shadow: 5px 5px 10px pink;
 			}
 		}
 	}
@@ -40,7 +40,8 @@ a {
 	text-decoration: none;
 	font-weight: bold;
 	&:hover {
-		color: $mainColor;
+		// color: $mainColor;
+		color: $hoverColor;
 	}
 }
 .header-menu {
@@ -54,7 +55,8 @@ a {
 		letter-spacing: 1px;
 		position: relative;
 		&:hover {
-			color: $mainColor;
+			// color: $mainColor;
+			color: $hoverColor;
 		}
 		&.dropdown-item {
 			&:hover {
@@ -67,7 +69,8 @@ a {
 	font-size: 16px;
 	.link-of-drop {
 		&:hover {
-			color: $mainColor;
+			// color: $mainColor;
+			color: $hoverColor;
 		}
 	}
 }
