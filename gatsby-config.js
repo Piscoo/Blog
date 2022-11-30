@@ -39,7 +39,19 @@ module.exports = {
 				icon: `src/images/logo.jpg`, // This path is relative to the root of the site.
 			},
 		},
-		`gatsby-transformer-remark`,
+		{
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1200,
+            },
+          },
+        ],
+      },
+    },
 		`gatsby-plugin-antd`,
 	],
 }

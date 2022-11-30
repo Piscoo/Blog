@@ -25,6 +25,7 @@ const Header = (props) => {
 			</div>
 			<div className="header-menu">
 				<Link to="/blogs" className="header-item">Blog</Link>
+				<Link to="/tools" className="header-item">Tools</Link>
 				<Link to="/about" className="header-item">About</Link>
 				<div className="header-item dropdown-item">
 					<Dropdown overlay={menu} placement="bottom" arrow={{pointAtCenter: true}}>

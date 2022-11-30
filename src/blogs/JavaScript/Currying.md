@@ -5,7 +5,7 @@ tags: "柯里化"
 categories: "JavaScript"
 ---
 
-![Currying](../../images/JS/curry.png)
+![Currying](../../images/js/curry.png)
 # 柯里化
 
 > [柯里化(Currying)](https://zh.wikipedia.org/wiki/%E6%9F%AF%E9%87%8C%E5%8C%96)，是把接收多个参数的函数变换成接受一个单一参数的函数，并且返回接受余下的参数而且返回结果的新函数的技术。
@@ -156,4 +156,4 @@ function curried(...args) {
 柯里化让我们可以很轻松的获得偏函数。就像之前的日志 `log` 例子，一个普通的三参数函数 `log(data, importance, message)` 在柯里化之后，当用一个参数 `log(date)` 或者两个参数 `log(date, importance)` 的方式去调用时会返回偏函数。  
 
 
-手动翻译自[原文](https://javascript.info/currying-partials)
+手动翻译自 => [原文](https://javascript.info/currying-partials)

@@ -7,6 +7,7 @@ import { StaticImage } from "gatsby-plugin-image"
 const About = () => {
 	return(
 		<Layout>
+			<Seo title="About" />
 			<h1>This is everything about Pisco and this site.</h1>
 		</Layout>
 	)

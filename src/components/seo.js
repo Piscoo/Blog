@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function Seo({ description, lang, meta, title }) {
+function Seo({ description, lang, meta, title="Pisco's Website" }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -24,9 +24,8 @@ function Seo({ description, lang, meta, title }) {
       }
     `
   )
-
   const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const defaultTitle = site.siteMetadata?.title || "Pisco's Website"
 
   return (
     <Helmet
@@ -34,7 +33,7 @@ function Seo({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : "Pisco's Website"}
       meta={[
         {
           name: `description`,
@@ -58,7 +57,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: site.siteMetadata?.author || `Pisco`,
         },
         {
           name: `twitter:title`,

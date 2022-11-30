@@ -22,7 +22,7 @@ const IndexPage = () => {
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
-	})
+	}, [])
 
 	const handleScroll = (): void => {
 		let top: number = document.documentElement.scrollTop;
