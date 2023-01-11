@@ -3,6 +3,8 @@
 	margin: 0 auto;
 	padding: 50px 60px 180px;
 	font-size: 18px;
+	min-height: 100%;
+	position: relative;
 }
 h1, h2 {
 	text-align: center;
@@ -19,7 +21,9 @@ h1, h2 {
 }
 .next-prev {
 	width: 100%;
-	margin: 50px auto;
+	position: absolute;
+	bottom: 50px;
+	left: 0;
 	.another-blog {
 		width: 48%;
 		color: #fff;
@@ -37,16 +41,20 @@ h1, h2 {
 			margin-top: 6px;
 			font-size: 20px;
 		}
+		&.prev-blog, &.next-blog {
+			position: absolute;
+			bottom: 0;
+		}
 		&.prev-blog {
-			float: left;
+			left: 0;
 		}
 		&.next-blog {
 			text-align: right;
-			float: right;
+			right: 0;
 		}
 		&:hover {
 			box-shadow: none;
-			transform: translateY(4px);
+			transform: translateY(-4px);
 		}
 	}
 }

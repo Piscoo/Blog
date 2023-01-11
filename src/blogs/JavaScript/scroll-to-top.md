@@ -1,10 +1,10 @@
 ---
-title: "JS页面平滑滚动到顶部"
+title: "JS常用函数"
 date: "2022-04-12"
 tags: "skill"
 categories: "JavaScript"
 ---
-## 页面平滑滚动到顶部的实现方法
+## 一些经常会用到的函数及兼容处理
 
 ### 1. `window.scrollTo` API
 在实际业务中经常会碰到需要将页面滚动到顶部的需求，最常见的做法是使用 `window.scrollTo` API：
@@ -36,3 +36,26 @@ const scrollToTop = () => {
 }
 ```
 浏览器兼容良好，具体可在 Can I Use上查询。
+
+### 3. Element offsetTop
+获取元素到视口顶部距离
+```js
+function getElementTop(element){
+	let actualTop = element.offsetTop;
+	let current = element.offsetParent;
+
+	while (current !== null){
+		actualTop += current.offsetTop;
+		current = current.offsetParent;
+	}
+
+	return actualTop;
+}
+// 将元素滚动到顶部
+document.documentElement.scrollTo({
+	top: distance,
+	behavior: 'smooth'
+})
+
+// Tips: 一般来讲会将元素滚动到offsetTop - Header.height的位置
+```
