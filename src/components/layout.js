@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import Header from "./header/header"
 import "./layout.scss"
 
-const Layout = ({ children, headerClassName, fullScreenContent = false }) => {
+const Layout = ({ children, headerClassName = '', fullScreenContent = false }) => {
 	return (
 		<div style={{ width: `100%`, height: `100%` }}>
 			<Header
